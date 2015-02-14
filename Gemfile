@@ -44,6 +44,11 @@ end
 
 
 gem 'mongoid'
+gem 'simple_form'
+gem 'bootstrap-sass'
+gem 'autoprefixer-rails'
+gem 'font-awesome-sass'
+
 
 
 

@@ -1,0 +1,52 @@
+---
+scripts:
+- npc: "谢行知"
+  sentences:
+  - text: "在分享之前，志愿者还会在群里搜集大家的问题的吴笛 "
+    speed: 20
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
+- npc: "吴笛"
+  sentences:
+  - text: "各位好，我来这边请大家帮忙啦"
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
+- npc: "谢行知"
+  sentences:
+  - text: "少林 快来！"
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
+- npc: "吴笛"
+  sentences:
+  - text: "周六我要在开智群里面分享点知识，我自己一个人难以确保我讲得明白，有用，所以要大家帮忙评估一下。"
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
+- npc: "吴笛"
+  sentences:
+  - text: "我是这样打算的，放空我的头脑，不自以为是也不妄自菲薄，请各位来听一听我要讲的几个要点，然后明确指出这些点中，哪些点你们觉得值得说/不值得说，哪些点你们觉得我讲的清晰/模糊，哪些点你们觉得偏主观臆断/相对客观一点。"
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
+- npc: "吴笛"
+  sentences:
+  - text: "我是这样打算的，放空我的头脑，不自以为是也不妄自菲薄，请各位来听一听我要讲的几个要点，然后明确指出这些点中，哪些点你们觉得值得说/不值得说，哪些点你们觉得我讲的清晰/模糊，哪些点你们觉得偏主观臆断/相对客观一点。"
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
+- npc: "吴笛"
+  sentences:
+  - text: "我是这样打算的，放空我的头脑，不自以为是也不妄自菲薄，请各位来听一听我要讲的几个要点，然后明确指出这些点中，哪些点你们觉得值得说/不值得说，哪些点你们觉得我讲的清晰/模糊，哪些点你们觉得偏主观臆断/相对客观一点。"
+    style:
+      display: block
+      padding-top: 8%
+    delay: 400
