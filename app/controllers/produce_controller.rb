@@ -57,15 +57,13 @@ class ProduceController < ApplicationController
 
 
     def convert_qq(str, pre_path)
-      date1 = /^[\d{2}:\d{2}:\d{2}]{1,}/
-      date2 = /^[\d{4}\/\d{1,2}\/\d{1,2} \d{2}:\d{2}:\d{2}]{1,}/
+      date1 = /^[\d{2}:\d{2}:\d{2}]{8,}/
+      date2 = /^[\d{4}\/\d{1,2}\/\d{1,2} \d{2}:\d{2}:\d{2}]{18,}/
 
       str = str.gsub(date1, '').gsub(date2, '')
 
-      p str
 
-
-      pattern = /^[\u4E00-\u9FA5\w]+[\s][\d{4}\/\d{1,2}\/\d{1,2} \d{2}:\d{2}:\d{2}]{1,}\s+/
+      pattern = /^[\u4E00-\u9FA5\w]+[\s][\d{4}\/\d{1,2}\/\d{1,2} \d{2}:\d{2}:\d{2}]{18,}\s+/
       items = str.scan(pattern)
       values = str.split(pattern).delete_if(&:blank?)
 
