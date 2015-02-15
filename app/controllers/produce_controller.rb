@@ -64,6 +64,10 @@ class ProduceController < ApplicationController
       data = {}
       data['scripts'] = []
       items.each_with_index do |item, index|
+        if values[index].nil?
+          data['scripts'] << ''
+          next
+        end
 
         yml_file = YAML::load_file(pre_path)
 
