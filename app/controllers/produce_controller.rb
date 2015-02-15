@@ -15,12 +15,12 @@ class ProduceController < ApplicationController
   def convert
 
     pre_path = Rails.root.to_s + '/public/pre.yml'
-
+    chat_text = params[:chat_text].strip
     case params[:type]
     when 'qq'
-      @data = convert_qq(params[:chat_text], pre_path)
+      @data = convert_qq(chat_text, pre_path)
     else
-      @data = convert_webchat(params[:chat_text], pre_path)
+      @data = convert_webchat(chat_text, pre_path)
     end
     
 
