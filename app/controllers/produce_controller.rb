@@ -13,18 +13,21 @@ class ProduceController < ApplicationController
 
 
   def convert
+    
+
+    target_file = Rails.root.to_s + '/public/target.yml'
     file_path = Rails.root.to_s + '/public/origin.yml'
     yml_file = YAML::load_file(file_path)
 
-    str = params[:chat_text]
 
-    # p str
+    File.open(target_file, 'w') {}
+
+    str = params[:chat_text]
 
 
     str = str.gsub(/\d{2}\:\d{2}/, '').gsub(/\*/, '').gsub(/\n/,'').gsub(/@/, '').gsub(/:/, '').gsub(/\r/, '')
     items = str.scan(/\[(.*?)\]([^\[]*)/)
 
-    # p items
 
     items.each_with_index do |item, index|
       # p index
@@ -32,16 +35,15 @@ class ProduceController < ApplicationController
       # p item[1]
 
       item[1] = item[1].gsub(/^#{item[0]}/, '')
-      yml_file['scripts'][index]['npc'] = item[0]
-      yml_file['scripts'][index]['sentences'][0]['text'] = item[1]
+      yml_file['scripts'][0]['npc'] = item[0]
+      yml_file['scripts'][0]['sentences'][0]['text'] = item[1]
 
-      # @output = yml_file.to_yaml + "\n"
 
-      File.open(file_path, 'w') {|f| f.write yml_file.to_yaml }
+      File.open(target_file, 'a') {|f| f.write yml_file.to_yaml }
 
     end
 
-    @output = File.read(file_path)
+    @output = File.read(target_file)
 
 
     render :index
