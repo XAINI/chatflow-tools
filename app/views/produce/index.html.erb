@@ -1,8 +1,8 @@
 <%= form_tag("/produce/convert", method: "post") do %>
   <input type="submit" name="submit" value="Convert" />
   <select name="type">
-    <option value="qq">qq</option>
-    <option value="webchat">webchat</option>
+    <option value="qq" <% if params[:type] == 'qq' %> selected <% end %>>qq</option>
+    <option value="webchat" <% if params[:type] == 'webchat' %> selected <% end %>>webchat</option>
   </select>
   <div class="row">
     <div class="col-md-6">
