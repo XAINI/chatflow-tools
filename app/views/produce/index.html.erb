@@ -1,5 +1,9 @@
 <%= form_tag("/produce/convert", method: "post") do %>
-  <input type="submit" name="button" value="Convert" />
+  <input type="submit" name="submit" value="Convert" />
+  <select name="type">
+    <option value="qq">qq</option>
+    <option value="webchat">webchat</option>
+  </select>
   <div class="row">
     <div class="col-md-6">
       <textarea name="chat_text" style="width: 99%; height: 500px;"><%= params[:chat_text] %></textarea>
